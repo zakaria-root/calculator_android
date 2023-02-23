@@ -12,7 +12,7 @@ Currently in Development.
 
  <h1 align="center">
   <br>
-<img src='images/landscope.png' width='500'/> 
+<img src='images/landscope.png' width='900'/> 
   <br/>
   Landscope interface
 </h1>
@@ -21,7 +21,7 @@ Currently in Development.
 ## functional need
 - [x] +/-/* operation
 - [x] quotient operation
-- [x] Tangente
+- [x] Tangente 
 - [x] consinus 
 - [x] sinus
 - [x] logarithmic
