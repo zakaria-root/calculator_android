@@ -1,11 +1,18 @@
 package com.example.test;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.mariuszgromada.math.mxparser.Expression;
 
@@ -13,21 +20,46 @@ public class MainActivity extends AppCompatActivity {
 
      TextView tvResult;
     TextView tvExpression;
-
     public void initValues(){
         tvExpression.setText("");
         tvResult.setText("0");
     }
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE)   ;
+        this.getWindow().setFlags(0xFFFFFFFF, WindowManager.LayoutParams.FLAG_FULLSCREEN|WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_main);
         tvResult = findViewById(R.id.result_view);
         tvExpression = findViewById(R.id.expression_view);
         initValues();
     }
+
+
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+            if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                setContentView(R.layout.activity_main_landspace);
+                tvResult = findViewById(R.id.result_view);
+                tvExpression = findViewById(R.id.expression_view);
+                initValues();
+                    Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
+                } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+                setContentView(R.layout.activity_main);
+                tvResult = findViewById(R.id.result_view);
+                tvExpression = findViewById(R.id.expression_view);
+                initValues();
+                    Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+            }
+        }
 
 
     public void calculate(View v){

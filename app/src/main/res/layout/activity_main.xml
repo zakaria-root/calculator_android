@@ -6,15 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="16dp"
-
         android:background="@color/yellow"
         >
+
 
         <TextView
             style="@style/styleText"
@@ -26,14 +28,13 @@
             android:textFontWeight="1"
             android:textSize="30sp"
 
-
             />
 
         <TextView
             android:id="@+id/result_view"
             style="@style/styleText"
             android:layout_width="match_parent"
-            android:layout_height="127dp"
+            android:layout_height="160dp"
             android:layout_marginBottom="2dp"
             android:gravity="bottom|right"
             android:text="0"
@@ -95,7 +96,60 @@
                     android:onClick="setTextViewExpression"
                     android:text=")" />
             </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/cos1_btn"
+                    style="@style/btnOperator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setTextViewExpression"
+                    android:text="arccos"
+                    android:textSize="11dp"
+                    />
+                <Button
+                    android:id="@+id/sin1_btn"
+                    style="@style/btnOperator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setTextViewExpression"
+                    android:textSize="11dp"
 
+                    android:text="arcsin" />
+                <Button
+                    android:id="@+id/tan1_btn"
+                    style="@style/btnOperator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setTextViewExpression"
+                    android:textSize="11dp"
+
+                    android:text="arctan" />
+                <Button
+                    android:id="@+id/ln1_btn"
+                    style="@style/btnOperator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setTextViewExpression"
+
+                    android:text="e^" />
+                <Button
+                    android:id="@+id/log1_btn"
+                    style="@style/btnOperator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setTextViewExpression"
+                    android:text="10^" />
+
+
+
+            </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -151,6 +205,8 @@
             </TableRow>
 
 
+
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -200,7 +256,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="setTextViewExpression"
-                    android:text="/" />
+                    android:text="/"
+                    android:textSize="15dp"
+                    />
             </TableRow>
 
             <TableRow
@@ -243,7 +301,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="setTextViewExpression"
-                    android:text="+" />
+                    android:text="+"
+                    android:textSize="15dp"/>
             </TableRow>
 
             <TableRow
@@ -285,7 +344,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="setTextViewExpression"
-                    android:text="-" />
+                    android:text="-"
+                    android:textSize="15dp"/>
             </TableRow>
 
             <TableRow
@@ -326,7 +386,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="setTextViewExpression"
-                    android:text="*" />
+                    android:text="*"
+                    android:textSize="15dp"/>
             </TableRow>
 
             <TableRow
@@ -371,7 +432,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="calculate"
-                    android:text="=" />
+                    android:text="="
+                    android:textSize="15dp"/>
             </TableRow>
 
         </TableLayout>

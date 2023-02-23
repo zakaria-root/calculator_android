@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
+    <style name="btnOperatorLandScope" parent="TextAppearance.AppCompat">
+        <item name="android:layout_margin">3dp</item>
+        <!--        <item name="android:backgroundTint">@color/teal_200</item>-->
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:backgroundTint">@color/black_shad_2</item>
+        <item name="android:padding" >5dp</item>
+    </style>
+
+    <style name="styleTextLandScope" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/black_shad_2</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+
+    <style name="btnNumberLandeScope" parent="TextAppearance.AppCompat">
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:backgroundTint">@color/black_shad_2</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
     <style name="btnNumber" parent="TextAppearance.AppCompat">
         <item name="android:layout_margin">3dp</item>
         <item name="android:backgroundTint">@color/black_shad_2</item>
@@ -9,17 +33,16 @@
 
     <style name="btnOperator" parent="TextAppearance.AppCompat">
         <item name="android:layout_margin">3dp</item>
-<!--        <item name="android:backgroundTint">@color/teal_200</item>-->
         <item name="android:textColor">@color/yellow</item>
         <item name="android:backgroundTint">@color/black_shad_2</item>
-        <item name="android:padding" >15dp</item>
+        <item name="android:padding" >8dp</item>
+
     </style>
 
     <style name="styleText" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/white</item>
         <item name="android:background">@color/black_shad_2</item>
         <item name="android:padding">15dp</item>
-
     </style>
 
 
